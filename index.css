@@ -1,0 +1,721 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+
+/* to style all everything we use *  */
+*{
+    /* to make all text of font-family like this*/
+font-family: 'Montserrat', sans-serif;
+font-weight: bolder;
+/* to eliminate the defulat browser margin and padding*/
+margin: 0;
+padding: 0;
+/* box-sizing: this property adds equal padding and border for all width and height element */
+box-sizing: border-box;
+/*outline: includes width, style, color*/
+outline: none;
+border: none;
+text-decoration: none;
+text-transform: capitalize;
+transition: 0.1s linear;
+}
+/* declaring css variable to make reusable*/
+:root{
+    /*to declare css variale we use --*/
+    --black: #16161d;
+    --white: #fff;
+    --light-color: #808080;
+    --light-beg: #f5f5f8;
+    --google-color: #4285f4;
+  --twitter-color: #1da1f2;
+  --youtube-color: #ff0000;
+  --linkedin-color: #0e76a8;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+/*  all html e/l or tag style. all html tags those have the same css property, so we can style all by including in html tag*/
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+   /* rem: root em it indcates the font-size of the root element*/
+}
+
+
+/*resuable*/
+.heading{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* 1.header section style */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5rem 9%;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    }
+    .header.active {
+        background: var(--white);
+        padding: 3rem 9%;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      }
+      .header.active .logo,
+      .header.active .navbar a,
+      .header.active .bx 
+      {
+        color: var(--black);
+        font-weight: bold ;
+      }
+    .header .logo{
+        margin-right: auto;
+        font-size: 2rem;
+        color: var(--white);
+        font-weight: bolder;
+        font-family: Edwardian Script ITC;
+    }
+    .header .logo span{
+        font-weight: bolder;
+      
+    }
+    
+    .header .navbar a{
+    font-size: 1.7rem;
+    margin-left: 3rem;
+    color: var(--white);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    .header .bx{
+         color: var(--black); 
+         font-size: 2rem;
+         display: none;
+        }
+
+/* 2. home section style */
+
+.home{
+    height: 100vh;/* vh: view height*/
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(image/c1.jpg) no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+
+    display: flex;/*to display the available element in the cointainer in flaxiable structure or it puts all element horizontally*/
+    align-items: center;/* it makes the height of the element to be center = height*/
+    justify-content: center; /* it makes the widht of the element to be center = width*/
+    flex-flow: column;/* it puts all  elements in columon order or in block format */
+     
+}
+.home h1{
+   font-size: 7rem;
+   font-weight: bolder;
+   color: var(--white);
+   margin-bottom: 3rem;
+}
+.home h2{
+    font-size: 30px;
+    font-weight: 100px;
+    color: var(--google-color);
+    margin-bottom: 1rem;
+}
+
+ 
+.btn{
+    color: var(--white);
+    border: 0.1rem solid var(--white);
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+.btn:hover{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* 3.about section style */
+.about{
+    margin-top: 70px;
+    padding: 5rem 9%;
+
+}
+.about .box-contianer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+.about .box-contianer .box p{
+    font-size: 1.2rem;
+    text-transform: none;
+    font-weight: bolder;
+    line-height: 2;
+  
+}
+.about .box-contianer .box .image{
+    height: 60rem;
+}
+.about .box-contianer .box .image img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+/* 4.Quality section style */
+.quality{
+   
+    margin-bottom: 100px;
+}
+.quality  .box-contianer .boxs {
+    padding: 1rem 5%;
+   
+}
+.quality .boxs .box{
+    background-color: var(--black);
+    padding: 2.1rem;
+    margin: 1rem 0;
+    box-shadow: var(--box-shadow);
+    color: var(--white);
+}
+.quality .box-contianer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 0.5rem;
+    
+}
+
+.quality .box-contianer .box .sub-heading {
+    margin-bottom: 3rem;
+    font-weight: bold;
+  
+}
+.quality .box-contianer .box p{
+font-size: 1.4rem;
+line-height: 3.5rem;
+display: flex;
+align-items: center;
+padding: 2rem;
+justify-content: center;
+font-weight: bold;
+color: var(--light-color);
+}
+.quality .box-contianer .box h5{
+
+   font-size: 1.7rem;
+   color: var(--google-color);
+}
+
+/* 5. Service section style */
+.service  .box-contianer {
+    margin-bottom: 70px;
+}
+.service .box-contianer {
+    margin-top: 70px;
+}
+.service .box-contianer .boxs{
+    padding: 2rem 2%;
+}
+.service .boxs .box{
+    background: linear-gradient(to left
+    top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+  border-radius: 1rem;
+  
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.9);
+    text-align: center;
+   
+    margin: 2rem 0;
+    padding: 2.5rem;
+  
+}
+.service .box-contianer .boxs{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 5rem;
+}
+.service .box-contianer .boxs .box p, h2, h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+.service .box-contianer .boxs .box h3{
+    font-size: 1.9rem;
+    color: var(--google-color);
+}
+.service .box-contianer .boxs .box i{
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 40px;
+  
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    border-radius: 10%;
+    
+}
+.service .box-contianer .boxs:hover{
+background-color: var(--black);
+}
+.service .boxs .box:hover{
+    background-color: var(--google-color);  
+}
+.ani{
+    animation: ani 10s linear infinite;
+}
+@keyframes ani{
+    50%{
+        transform: translateX(30px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+}
+
+
+/* 6.Skill Setion Style */
+.skill .boxs .box{
+    background-color: var(--black);
+    color: white;
+    margin: 2rem 0;
+    padding: 1.5rem;
+  
+}
+
+.skill .box-contianer .boxs{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 2rem;
+}
+.skill .box-contianer .boxs{
+    padding: 2rem 4%;
+}
+.skill .box-contianer .boxs .box .box1{
+background-color: #ff0000;
+padding: 0.2rem 1%;
+border-radius: 20px;
+}
+.skill .box-contianer .boxs .box .box1::after{
+    background-color: var(--google-color);
+    padding: 0.2rem 45%;
+    border-radius: 20px;
+    content: " ";
+   
+    }
+    .skill .box-contianer .boxs .box  h1{
+        line-height: 3rem;
+    }
+
+    .skill .box-contianer .boxs .box:hover{
+        background-color: var(--light-color);
+        box-shadow: var(--box-shadow);
+    }
+
+    /* 7.portofolio Section style */
+    .portofolio .box-container {
+  
+        max-width: 600px;
+        position: relative;
+        margin: auto;
+      
+      }
+      .portofolio .box-container:hover {  
+      background-color: #456;
+      opacity: 0.9;
+      }
+      .portofolio .box-container i{
+          margin-top: 200px;
+          color: rgb(255, 255, 255);
+      
+      }
+     
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 10%;
+       
+      
+        padding: 5px;
+        color: white;
+        font-weight: bold;
+        font-size: 70px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+       
+      }
+      
+      
+      .num {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+      
+
+      /* 8.testimony setction style */
+      .testimony {
+        margin-top: 100px;
+      }
+      .testimony .box-contianer .boxs .box{
+        background: var(--black);
+        box-shadow: 6px 6px 20px rgba(7, 4, 4, 0.9);
+        text-align: center;
+         border-radius: 50%;
+         color: var(--white);
+       
+        padding: 9.5rem 5%;
+      }
+      .testimony .box-contianer .boxs{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 3rem;
+      }
+      .testimony .box-contianer .boxs {
+        padding: 2rem 5%;
+      }
+      .testimony .box-contianer .boxs .box .image img {
+       width: 20%;
+       height: 20%;
+       object-fit: cover;
+       border-radius: 50%;
+       background-color: #0e76a8;
+     
+      }
+     
+
+      /* 9.contat section style */
+      .contact{
+        margin-top: 100px;
+      }
+
+      .contact .box-container{
+        background-color: var(--light-beg);
+      }
+      .contact .box-container .boxs{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+        gap: 1rem;
+      }
+      .contact .box-container .boxs {
+        padding: 2rem 5%;
+      }
+      .contact .box-container .boxs input,
+      .contact .box-container .boxs textarea {
+  background-color: var(--white);
+  width: 70%;
+  padding: 2rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--dark-gray);
+  margin: 2rem 0;
+  resize: vertical;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+.contact .box-container .boxs .box h1, h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+   
+}  
+
+.contact .box-container .boxs .box .btn{
+    color: var(--black);
+    margin-top: 10px;
+    border: 0.5px solid #16161d;
+}
+.contact .box-container .boxs .box .btn:hover
+{
+    background-color: #1da1f2;
+}
+
+/*  10.footer section style */
+.footer{
+    margin-top: 70px;
+}
+.footer .box-container{
+    background-color: var(--black);
+    padding: 3%;
+}
+.footer .box-container .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: var(--twitter-color);
+    padding: 2rem 17%;
+   line-height: 7px;
+}
+
+.footer .box-container h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* buttom to top scroll */
+
+#myBtn {
+    display: none;
+    position: fixed; 
+    bottom: 10px;
+    right: 20px; 
+    z-index: 20; 
+    border: 2px solid #4767ed;
+    outline: none; 
+    background-color:  white;
+    
+    color: white; 
+    cursor: pointer; 
+    padding: 5px; 
+    border-radius: 20px; 
+   
+    width: 30px;
+    height: 50px;
+  } 
+
+  #myBtn:hover {
+    background-color: #4767ed;
+  }
+
+  /* Responsiveness style using media quaries */
+  /* for small laptop */
+  @media (max-width: 1200px) {
+    .header {
+      padding: 2rem;
+    }
+  
+    .header.active {
+      padding: 2rem;
+    }
+  
+    section {
+      padding: 3rem 0.2rem;
+    }
+    html {
+        font-size: 60%;
+      }
+    .home h1 {
+      font-size: 5rem;
+    }
+
+    .about .box-contianer .box .image img{
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        margin-top: 60px;
+    }
+
+    .testimony .box-contianer .boxs {
+        padding: 2rem 2%;
+      }
+      .service .box-contianer .boxs {
+        padding: 2rem 2%;
+    }
+    .service .box-contianer .boxs .box {
+        padding: 2rem 6%;
+    }
+    .service .box-contianer .boxs  {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 1rem;
+    }
+    .skill .box-contianer .boxs{
+        padding: 2rem 2%;
+    }
+    .skill .box-contianer .boxs .box{
+       
+
+        padding: 2rem 7%;
+    }
+    .skill .box-contianer .boxs{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 1rem;
+    }
+  
+
+  }
+  
+  @media (max-width: 991px) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header .bx {
+      display: block;
+      color: white;
+    }
+  
+    .header .navbar {
+      position: fixed;
+      top: 6.4rem;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      display: flex;
+      flex-flow: column;
+      text-align: center;
+      transform: translateX(100%);
+    }
+  
+    .header .navbar.show {
+      transform: translateX(0);
+    }
+  
+    .header .navbar a {
+      color: var(--black);
+      margin: 0;
+      font-size: 2rem;
+      margin: 2rem 0;
+    }
+    .about .box-contianer .box .image img{
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        margin-top: 60px;
+    }
+    .service .box-contianer .boxs {
+        padding: 2rem 1%;
+    }
+    .service .box-contianer .boxs .box {
+        padding: 2rem 2%;
+    }
+    .service .box-contianer .boxs  {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 1rem;
+    }
+
+    .skill .box-contianer .boxs{
+        padding: 2rem 1%;
+    }
+    .skill .box-contianer .boxs .box{
+       
+
+        padding: 2rem 2%;
+    }
+    .skill .box-contianer .boxs{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 1rem;
+    }
+  
+    .testimony .box-contianer .boxs  {
+      
+        padding: 4rem 0.2%;
+       
+      }
+      .testimony .box-contianer .boxs .box {
+      
+        padding: 4rem 2%;
+       
+      }
+
+      .testimony .box-contianer .boxs  {
+      
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 2fr));
+        gap: 0.5rem;
+       
+      }
+
+    .contact .box-container form .inputBox input {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    html {
+      font-size: 55%;
+    }
+
+    .service .box-contianer .boxs {
+        padding: 2rem 4%;
+    }
+    .service .box-contianer .boxs .box {
+        padding: 2rem 4%;
+    }
+    .service .box-contianer .boxs  {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 2rem;
+    }
+    .skill .box-contianer .boxs{
+        padding: 2rem 4%;
+    }
+    .skill .box-contianer .boxs .box{
+       
+
+        padding: 2rem 4%;
+    }
+    .skill .box-contianer .boxs{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 2rem;
+    }
+    .testimony .box-contianer .boxs .box p{
+   font-size: 9px;
+    }
+    .contact .box-container .boxs input,
+      .contact .box-container .boxs textarea{
+        width: 100%;
+      }
+  }
+  @media (max-width: 400px) {
+    .testimony .box-contianer .boxs  {
+      
+        padding: 4rem 4%;
+       
+      }
+      .testimony .box-contianer .boxs .box {
+      
+        padding: 8rem 7%;
+       
+      }
+
+      .testimony .box-contianer .boxs  {
+      
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
+        gap: 2rem;
+       
+      }
+      .footer .box-container h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+    }
+    }
+
+    @media (max-width: 340px) {
+        .home h1, h2{
+           
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       text-align: center;
+           
+         }
+        
+        }
